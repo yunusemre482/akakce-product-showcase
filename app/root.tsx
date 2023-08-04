@@ -1,5 +1,5 @@
-import { cssBundleHref } from "@remix-run/css-bundle";
 import type { LinksFunction } from "@remix-run/node";
+import stylesheet from './tailwind.css';
 import {
   Links,
   LiveReload,
@@ -9,9 +9,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
-export const links: LinksFunction = () => [
-  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
-];
+
+export const links: LinksFunction = () => [{ rel: 'stylesheet', href: stylesheet }];
 
 export default function App() {
   return (
@@ -22,7 +21,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className='flex items-center justify-center '>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
