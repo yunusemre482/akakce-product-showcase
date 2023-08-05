@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
-import type { Product } from '~/routes/products';
-import type { ProductDetail } from '~/routes/product.$code'
+import type { IProductListItem } from '~/shared/types/ProductListItem.interface';
+import type { IProductDetail } from '~/shared/types/ProductDetail.interface';
 
 
 const BASE_URL = 'https://mocki.io/v1';  // API base url (should be in .env file) 
@@ -9,14 +9,14 @@ const BASE_URL = 'https://mocki.io/v1';  // API base url (should be in .env file
 type ProductListResponse = {
     result: {
         nextUrl?: string,
-        products: Product[];
-        horizontalProducts: Product[];
+        products: IProductListItem[];
+        horizontalProducts: IProductListItem[];
     }
 };
 
 
 type ProductDetailResponse = {
-    result: ProductDetail;
+    result: IProductDetail;
 }
 
 

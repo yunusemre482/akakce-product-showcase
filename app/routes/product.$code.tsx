@@ -1,18 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import useApi from '~/services/api';
-export interface ProductDetail {
-    mkName: string;
-    productName: string;
-    badge: string;
-    rating: number;
-    imageUrl: string;
-    storageOptions: string[];
-    countOfPrices: number;
-    price: number;
-    freeShipping: boolean;
-    lastUpdate: string;
-}
+import type { IProductDetail } from '~/shared/types/ProductDetail.interface';
+
 
 type Props = {}
 
@@ -21,7 +11,7 @@ const Product = (props: Props) => {
     // the parameter is derived from the name of the file
     const { code } = useParams();
 
-    const [product, setProduct] = useState<ProductDetail | null>();
+    const [product, setProduct] = useState<IProductDetail | null>();
     const { getProductDetail } = useApi();
 
     const getProduct = async () => {

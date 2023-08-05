@@ -20,12 +20,18 @@ const Products = ({ }: Props) => {
     const [products, setProducts] = useState<Product[]>([]);
     const [horizontalProducts, setHorizontalProducts] = useState<Product[]>([]);
 
+
     const { getProductList } = useApi();
 
     const getProducts = async () => {
         const response = await getProductList();
+        if (!response) return;
 
-        console.log(response);
+        const { products, horizontalProducts } = response.result;
+
+        setProducts(products);
+        setHorizontalProducts(horizontalProducts);
+
     }
 
 
