@@ -1,4 +1,4 @@
-export function formatPrice(price: number): string[] {
+export function formatPrice(price: number | null): string[] {
     // check if the price is a number or not
     if (!price) return ['0', '00']
     // format the price to 2 decimal places

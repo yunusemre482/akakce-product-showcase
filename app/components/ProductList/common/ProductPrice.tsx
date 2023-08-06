@@ -11,7 +11,7 @@ const ProductPrice: React.FC<ProductPriceProps> = ({ price }) => {
     return (
         <span className='text-[1.25rem] font-medium text-[#333]'>
             {beforeDecimal}
-            <i className='text-[1rem] text-inherit'>,{afterDecimal} TL</i>
+            <i className='text-[1rem] text-inherit font-normal'>,{afterDecimal} TL</i>
         </span>
     );
 };
