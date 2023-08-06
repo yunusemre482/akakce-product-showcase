@@ -13,10 +13,10 @@ const Pagination: React.FC<PaginationProps> = ({ goToNextPage, goToPreviousPage 
 
     return (
         <div className='flex flex-row w-full justify-between mt-6  px-3'>
-            <button className='bg-[#237ec5] flex items-center justify-center flex-row text-white px-8 py-3 gap-2 rounded-full  shadow focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75ƒ' onClick={goToPreviousPage}>
+            <button id="pagination-prev-button" data-testid="prev-button" className='bg-[#237ec5] flex items-center justify-center flex-row text-white px-8 py-3 gap-2 rounded-full  shadow focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75ƒ' onClick={goToPreviousPage}>
                 <MdArrowBackIos /> <span>Önceki</span>
             </button>
-            <button className='bg-[#237ec5] flex items-center justify-center flex-row text-white px-8 py-3 gap-2 rounded-full  shadow focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;' onClick={goToNextPage}>
+            <button id='pagination-next-button' name="next" data-testid="next-button" className='bg-[#237ec5] flex items-center justify-center flex-row text-white px-8 py-3 gap-2 rounded-full  shadow focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;' onClick={goToNextPage}>
                 <span>Sonraki </span>
                 <MdArrowForwardIos />
             </button>

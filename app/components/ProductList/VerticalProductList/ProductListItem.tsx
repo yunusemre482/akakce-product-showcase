@@ -25,7 +25,7 @@ const VerticalProductListItem: React.FC<VerticalProductListItemProps> = ({
     followCount,
 }) => {
     return (
-        <li className='flex flex-col items-start justify-start bg-white p-4 rounded-md gap-[6px] max-w-[16rem] relative'>
+        <li className='flex flex-col items-start justify-start bg-white p-4 rounded-md gap-[6px] max-w-[16rem] relative' data-testid="product-list-item">
             <ProductImage imageUrl={imageUrl} name={name} />
             <ProductTitle name={name} />
             <ProductPriceSection price={price} countOfPrices={countOfPrices} />

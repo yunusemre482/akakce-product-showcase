@@ -36,8 +36,10 @@ const HorizontalProductListItem: React.FC<HorizontalProductListItemProps> = ({
                 opacity: isVisible ? 1 : 0,
                 transform: `translateX(calc(${-index} * 100% - ${index} * 0.5rem))`,
             }}
+
             transition={{ duration: 1, delay: isVisible ? 0.5 : 0 }}
-            className='relative flex flex-row items-start justify-start bg-white py-4 px-8 rounded-md gap-12 w-[34rem] min-w-full'
+            className={`relative flex flex-row items-start justify-start bg-white py-4 px-8 rounded-md gap-12 w-[34rem] min-w-full ${isVisible ? 'pVisible' : 'pHidden'}}`}
+            data-testid="horizontal-product-list-item"
         >
             <ProductImage imageUrl={imageUrl} name={name} />
             <div className='w-3/4 h-full flex flex-col gap-6 justify-center'>
