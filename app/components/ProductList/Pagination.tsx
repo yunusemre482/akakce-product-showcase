@@ -12,7 +12,7 @@ const Pagination: React.FC<PaginationProps> = ({ goToNextPage, goToPreviousPage 
 
 
     return (
-        <div className='flex flex-row w-full justify-between mt-6  px-3'>
+        <div className='flex flex-row w-full lg:justify-between justify-center mt-6  px-3 gap-4 '>
             <button id="pagination-prev-button" data-testid="prev-button" className='bg-[#237ec5] flex items-center justify-center flex-row text-white px-8 py-3 gap-2 rounded-full  shadow focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75ƒ' onClick={goToPreviousPage}>
                 <MdArrowBackIos /> <span>Önceki</span>
             </button>

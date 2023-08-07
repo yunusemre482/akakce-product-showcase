@@ -47,7 +47,7 @@ const HorizontalProductList: React.FC<HorizontalProductListProps> = ({ products 
 
     return (
         <div className='relative'>
-            <ul className='flex flex-row overflow-hidden w-[clamp(20rem,34rem,calc(100%))] min-h-max p-2 flex-1 h-64 gap-2'>
+            <ul className='hidden sm:flex flex-row  overflow-hidden mx-auto w-[23rem] sm:w-[clamp(15rem,34rem,calc(100%))] min-h-max p-2 flex-1 h-64 gap-2'>
                 {products.length === 0 && <Skeleton />} {/* Show skeleton when products is empty */}
                 {products.map((product, index) => (
                     <HorizontalProductListItem

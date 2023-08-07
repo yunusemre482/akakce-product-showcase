@@ -49,7 +49,7 @@ const Products = ({ }: Props) => {
 
     return (
         <main className='flex min-h-full justify-center  w-[clamp(40rem,50%,100%)] max-w-[1200px] bg-slate-200 h-fit'>
-            <div className='inline-block   w-[clamp(32rem,36rem,40rem)]   h-fit px-4 py-2'>
+            <div className='inline-block   sm:w-[clamp(32rem,36rem,40rem)]  w-full h-fit sm:px-4 sm:py-2'>
                 {horizontalProducts && <HorizontalProductList products={horizontalProducts} />}
                 {products && <VerticalProductList products={products} />}
                 <Pagination goToPreviousPage={handlePreviousPage} goToNextPage={handleNextPage} />

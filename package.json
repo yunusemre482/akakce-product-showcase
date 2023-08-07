@@ -4,6 +4,7 @@
 	"scripts": {
 		"test": "jest --watch",
 		"build": "remix build",
+	
 		"dev": "remix dev",
 		"start": "remix-serve build",
 		"typecheck": "tsc"
